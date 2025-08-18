@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8">
+        <title>Unboxing your home network.</title>
+        <style>
+			
+			header{
+				border:1px dashed pink;
+				background-color: #FFFFFF;
+				text-align: center;
+			}
+			#chapters {
+				background-color: #5BCEFA;
+				border: 2px solid #F5A9B8;	
+			}
+			#intro {
+				border:1px dashed pink;
+				background-color: #FFFFFF;
+				float:right;
+				text-align: center;
+			}
+			#first,  #fifth {
+				border:1px dashed pink;
+				background-color: #5BCEFA;
+				float:right;
+			}
+			#secnd, #forth  {
+				border:1px dashed lightblue;
+				background-color: #F5A9B8;
+				float:right;
+			}
+			#third {
+				border:1px dashed pink;
+				background-color: #FFFFFF;
+				float:right;
+			}
+			
+			h2 {
+				text-align: center;
+			}
+			.imgbox {
+				float:right;
+			}
+			
+			.page-layout {
+				display: grid;
+				grid-template-areas:
+				"title title"
+			  	"sidebar content"
+			  	"footer footer";
+				grid-template-columns: 1fr 4fr;
+				gap: 1rem;
+				padding: 2rem;
+			}
+			#title-bar {
+				grid-area: title;
+				background-color: #FFFFFF;
+				padding: 1rem;
+				text-align: center;
+				border-radius: 8px;
+				border: 2px solid #F5A9B8;
+				box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+			}
+			.sidebar {
+				grid-area: sidebar;
+				background-color: #FFFFFF;
+				border: 2px solid #F5A9B8;
+				padding: 1rem;
+				border-radius: 8px;
+				box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+			}
+			.content {
+				grid-area: content;
+				background-color: #FFFFFF;
+				border: 2px solid #F5A9B8;
+				padding: 1rem;
+				border-radius: 8px;
+				box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+			}
+			.sidebar section, .content section, .title-box section {
+				border: 2px solid #F5A9B8;
+				border-radius: 8px;
+				padding: 1rem;
+				margin-bottom: 1rem;
+				box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+			}
+			.page-footer{
+				grid-area: footer;
+				background-color:#FFFFFF;
+				border: 2px solid #F5A9B8;
+				color: #000000;
+				text-align:right;
+				padding: 0.5rem;
+				font-size: 0.9rem;
+				border-radius: 8px;
+			}	
+
+		</style>
+				
+				
+	</head>
+	<body>
+	<div class="page-layout">
+		<header id="title-bar"><img src="banner.png" alt="Zo&euml;'s Network Navigations on transparent background."></header>
+		<aside class="sidebar">
+		<section id="chapters">
+			<h2>Unboxing your home network.</h2>
+				<ol type="I">
+				<li><a href="#first">Download Nmap for windows</a></li>
+				<li><a href="#secnd">Open cmd.exe</a></li>
+				<li><a href="#third">Type Command ipconfig</a></li>
+				<li><a href="#forth">Open Zenmap</a></li>
+				<li><a href="#fifth">Run scan and View results</a></li>
+			</ol>
+		</section>
+		</aside>
+		<main class="content">
+		<section id="intro">
+			<h2>Unboxing your home network</h2>
+			<p>Welcome to Zo&#235; 's Network Navigations. Today, im excited to bring you an unboxing article!? But rather than me pretending to be surprised when opening a package, you get to be surprised by what devices are on your home network.</p>
+			</section>
+
+		<section id="first">
+			<h2>Download Nmap for windows</h2>
+			<section class="imgbox"><img src="nmapwindownload.png"  width="600" alt='Nmap for Windows download page with download link for nmap-7.97-setup.exe and Zenmap screenshot preview'>
+			<br><h2><cite>Nmap Windows Download by Zo&#235; Coolbaugh</cite></h2></section>
+			<p>First things first, before we can expose the secrets lurking in your living room, we need the ultimate spy tool. That's right, go grab Nmap for Windows. It's free, it's powerful, and it's basically the binoculars of the digital age. You wouldn't unbox a mystery box without a flashlight, right?
+			</p>
+			<ul>
+				<li>browse to <a href="https://nmap.org/download.html#windows">Nmap for Windows</a></li>
+				<li>Once you download the file run it and follow the install prompts (you will need admin prevlages for this part)</li>
+
+			</ul>
+			
+		</section>
+		<section id="secnd">
+			<h2>Open cmd.exe</h2>
+			<section class="imgbox"><img src="winrun.png"  width="300" alt='Windows Run dialog with "cmd" typed in the input field, ready to open Command Prompt'>
+			<br><h2><cite>Windows run window by by Zo&#235; Coolbaugh</cite></h2></section>
+			<p>Now that you've installed Nmap, it's time to go full hacker mode. Open up cmd.exe like you're launching a nuclear missile. This is where the magic starts. Black box, white text, it looks scary, feels cool, and will make you feel like you're in Mr. Robot (minus the hoodie… or not).</p>
+			<ul>
+				<li>we need to find out what ip address your local network is using</li>
+				<li>The quickest way to do that is to open cmd.exe</li>
+				<li>Press the windows key + r to bring up the run window</li>
+				<li>In the provided box type cmd and press enter</li>
+			</ul>
+		</section>
+		<section id="third">
+			<h2>Type Command ipconfig</h2>
+			<section class="imgbox"><img src="ipconfig.png"  width="300" alt='Windows command prompt showing Ethernet adapter details including IP address 10.0.0.196 and DNS suffix zoec.me'>
+			<br><h2><cite>Windows cmd terminal by by Zo&#235; Coolbaugh</cite></h2></section>
+			<p>Ready for the real juice? Type 'ipconfig' and prepare to reveal the true identity of your device on the network. It’s like checking your driver’s license before going on a spy mission: gotta know who you are before finding everyone else. Your IP address? It's your ticket to the unboxing event of the decade.</p>
+			<ul>
+				<li>once Cmd.exe is open type in ipconfig</li>
+				<li>look for your active connection to a netowrk either ethernet or wireless lan </li>
+				<li>under your active connection look for IPv4 Address and Subnet mask </li>
+				<li>Save both of these for the next step</li>
+			</ul>
+		</section>
+		<section id="forth">
+			<h2>Open Zenmap</h2>
+			<section class="imgbox"><img src="zenmap-no-648x700.png"  width="600" alt='Zenmap scan output showing open ports and OS details for multiple hosts including scanme.nmap.org'>
+			<br><h2><cite>Zenmap action shot by <a href="https://nmap.org/zenmap" target="_blank">nmap.org</a></cite></h2></section>
+			<p>Let's make things visual, baby. Launch Zenmap and be dazzled. This is Nmap's flashy sibling, which turns scans into visually appealing graphs and colorful maps. If Nmap is a detective, Zenmap is the conspiracy wall with red strings. Click that icon and get ready to see everything.</p>
+			<ul>
+				<li>Back to your desktop and look for the new shorcut named "Nmap - Zen map GUI"</li>
+				<li>Double click to run  that shortcut</li>
+			</ul>
+		</section>
+		<section id="fifth">
+			<h2>Run scan and View results</h2>
+			<section class="imgbox"><img src="scan.png"  width="600" alt='Zenmap interface displaying results of a network scan on subnet 10.0.0.0/24 with multiple hosts and open ports'>
+			<br><h2><cite>Zenmap scan results by Zo&#235; Coolbaugh</cite></h2>
+		</section>
+			<p>Here, it is the moment of truth. Hit scan and watch as your network secrets spill out like confetti from a busted pi&ntilde;ata. Printers you forgot existed, your smart fridge, your neighbor’s weird Wi-Fi name, it’s all here. Congratulations. You've officially unboxed your home network.</p>
+			<ul>
+				<li>Here is where we are going to use the IPv4 </li>
+				<li>Put your ip address and mask in the target box</li>
+				<li>there are several options for scans in the profile menu</li>
+				<li>once the scan runs Nmap will give you all kinds of information for the things on your network</li>
+			</ul>
+		</section>
+		</main>
+		<footer class="page-footer">
+			<p>&copy; 2025 by Zo&#235; Coolbaugh for BATECH 189</p> 
+		</footer>
+	</div>
+	</body>
+
+</html>
